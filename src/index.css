@@ -5,9 +5,26 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-left: 16.66%;
+  padding-right: 16.66%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto ;
+  row-gap: 1.5rem;
+}
+
+
+@media (min-width: 1024px) {
+  body {
+    padding-left: 2%;
+    padding-right: 2%
+  }
 }

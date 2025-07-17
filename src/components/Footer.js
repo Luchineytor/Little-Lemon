@@ -1,15 +1,16 @@
 
 import logo from "../assets/logo.jpg";
+import "./Footer.css";
 
 function Footer() {
 
     return (
-        <footer>
+        <footer className="footer">
             <div>
                 <img src={logo} alt="Little Lemon Logo" />
             </div>
-            <nav>
-                <section>
+            <nav className="footer-nav">
+                <section >
                     <h4>Doormat Navigation</h4>
                     <ul>
                         <li><a href="/">Home</a></li>
