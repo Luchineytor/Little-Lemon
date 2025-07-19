@@ -40,6 +40,11 @@ h4 {
 address {
     font-family: "Karla", sans-serif;
     font-size: 0.4rem;
+    
+}
+
+address li {
+    margin: 1.4rem 0;
 }
 
 

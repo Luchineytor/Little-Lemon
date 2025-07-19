@@ -25,7 +25,7 @@ function Main() {
                 <section className="specials-content">
                     <div className="special-card">
                         <div className="special-image">
-                            <img src="https://via.placeholder.com/150" alt="Greek Salad"/>
+                            <img src="https://picsum.photos/737/960" alt="Greek Salad"/>
                         </div>
                         <div className='special-head'>
                             <h4>Greek Salad</h4>
@@ -44,7 +44,7 @@ function Main() {
                     </div>
                     <div className="special-card">
                         <div className="special-image">
-                            <img src="https://via.placeholder.com/150" alt="Greek Salad"/>
+                            <img src="https://picsum.photos/737/960" alt="Greek Salad"/>
                         </div>
                         <div className='special-head'>
                             <h4>Greek Salad</h4>
@@ -63,7 +63,7 @@ function Main() {
                     </div>
                     <div className="special-card">
                         <div className="special-image">
-                            <img src="https://via.placeholder.com/150" alt="Greek Salad"/>
+                            <img src="https://picsum.photos/737/960" alt="Greek Salad"/>
                         </div>
                         <div className='special-head'>
                             <h4>Greek Salad</h4>
@@ -85,19 +85,19 @@ function Main() {
             <section className='testimonials'>
                 <article className="testimonials-card">
                 <h3>Rating</h3>
-                <img src="..." alt="…"/>
+                <img src="https://picsum.photos/30/30" alt="…"/>
                 <h4>Name</h4>
                 <p>Lorem Ipsum</p>
                 </article>
                 <article className="testimonials-card">
                 <h3>Rating</h3>
-                <img src="..." alt="…"/>
+                <img src="https://picsum.photos/30/30" alt="…"/>
                 <h4>Name</h4>
                 <p>Lorem Ipsum</p>
                 </article>
                 <article className="testimonials-card">
                 <h3>Rating</h3>
-                <img src="..." alt="…"/>
+                <img src="https://picsum.photos/30/30" alt="…"/>
                 <h4>Name</h4>
                 <p>Lorem Ipsum</p>
                 </article>
@@ -114,8 +114,8 @@ function Main() {
                         Lorem ipsum dolor Lorem ipsum dolor</p>
                 </section>
                 <section className='about-image'>
-                    <img src="https://via.placeholder.com/150" alt="About Us"/>
-                    <img src="https://via.placeholder.com/150" alt="About Us"/>
+                    <img src="https://picsum.photos/737/900" alt="About Us"/>
+                    <img src="https://picsum.photos/737/960" alt="About Us"/>
                 </section>
             </div>
 

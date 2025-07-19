@@ -1,14 +1,32 @@
 
 
+button{
+    font-family: "Karla", sans-serif;
+    font-size: 0.6rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.1rem;
+    border: none;
+    background-color: #f4ce14;
+    color: #333;
+    cursor: pointer;
+}
+
 .hero {
     display: flex;
     justify-content: space-around;
-    padding: 2rem;
+    background-color: #495e57;
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    margin-left: -50vw;
 }
 
 .hero img {
-    width: 12.4rem;
-    height: 12.9rem;
+    width: auto;
+    height: 19rem;
+    position: absolute;
+    top: 1.5rem;
+    left: 21.3rem;
 }
 
 .hero-text {
@@ -16,10 +34,11 @@
     flex-direction: column;
     align-items: flex-start;
     width: 10.7rem;
+    padding-left: 1rem  ;
 }
 
 .hero-text h1 {
-    margin-bottom: 0;;
+    margin-bottom: 0;
 }
 
 .hero-text h2 {
@@ -32,7 +51,7 @@
     font-size: .8rem;
 }
 .specials {
-    margin: 0 2rem ;
+    margin: 2rem 2rem ;
 }
 .specials-header {
     display: flex;
@@ -61,6 +80,11 @@
 .special-card {
     height: 13.4rem;
     width: 7.4rem;
+    background-color: #edefee;
+}
+
+.price{
+    color: #f65d20;
 }
 
 .special-head {
@@ -76,17 +100,26 @@
 }
 
 .testimonials {
-    margin: 2.5rem 0;
+    margin: 2rem 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+.testimonials{
+    background-color: #495e57;
+    padding: 3rem 3rem;
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    margin-left: -50vw;
 }
 
 .testimonials-card {
     padding: 0.5rem;
     width: 7rem;
     height: 7rem;
-    background-color: beige;  
+    background-color: #edefee;
     display: grid;
     grid-template-columns: 2.7rem 2.7rem;
     grid-template-rows: repeat(3, 1.83rem);
@@ -105,7 +138,8 @@
 
 .testimonials-card img {
   grid-area: image;
-  width: 3rem; height: 3rem;
+  width: 3rem; 
+  height: 3rem;
   object-fit: cover;
   align-self: center;
 }
@@ -122,11 +156,11 @@
 }
 
 .about {
-    margin: 2.5rem 0;
+    margin: 1rem 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 2rem;
+    padding: 0rem 2rem;
 }
 .about-text {
     display: flex;
@@ -144,11 +178,25 @@
     margin-bottom: 0.5rem;
 }
 
-.about-image img {
-  width: 7.37rem;
-  height: 9.6rem;    
+.about-image{
+    position: relative;
+    width: 11.7rem;
+    height: 12.3rem;
 }
-
+.about-image img {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    width: 7.37rem;
+    height: 9.6rem;   
+    z-index: 2; 
+}
+.about-image img:nth-of-type(2) {
+    position: absolute;
+    top: 0rem;
+    left: 4.3rem;   
+    z-index: 1; 
+}
 
 
 
