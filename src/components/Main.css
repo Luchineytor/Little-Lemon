@@ -50,39 +50,6 @@ button{
     margin-bottom: 1rem;
     font-size: .8rem;
 }
-.specials {
-    margin: 2rem 2rem ;
-}
-.specials-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1rem;
-}
-
-.specials-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.special-image {
-    width: 7.37rem;
-    height: 4rem;
-}
-
-.special-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.special-card {
-    height: 13.4rem;
-    width: 7.4rem;
-    background-color: #edefee;
-}
-
 .price{
     color: #f65d20;
 }
