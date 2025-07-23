@@ -4,6 +4,8 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import BookingPage from './components/BookingPage';
+import ConfirmedBooking from './components/ConfirmedBooking';
+// import { submitForm } from './components/Main';
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/booking" element={<BookingPage />} />
           <Route path="*" element={<Main />} />
+          <Route path="/confirmation" element={<ConfirmedBooking />} />
         </Routes>
         <Footer />
       </div>

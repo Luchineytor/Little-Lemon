@@ -4,9 +4,13 @@ import "./Main.css";
 import { Link } from 'react-router-dom';
 import Specials from "./Specials";
 
-function Main() {
+import BookingForm from "./BookingForm";
 
-    return (
+
+
+function Main() {
+    
+     return (
         <main>
             <div className="hero">
                 <section className="hero-text">

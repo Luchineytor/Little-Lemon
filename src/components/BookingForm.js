@@ -1,20 +1,53 @@
 import React, { useState } from 'react';
 import styles from './BookingForm.module.css';
+import { useReducer, useEffect } from 'react';
+import { initializeTimes, updateTimes } from './bookingReducer';
 
-function BookingForm() {
+function BookingForm({submitForm}) {
   const [resDate, setResDate] = useState('');
-  const [availableTimes, setAvailableTimes] = useState([
-    '17:00', '18:00', '19:00', '20:00', '21:00', '22:00'
-  ]);
+  const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
+  useEffect(() => {
+  const handleLoad = () => {
+      if (typeof window.fetchAPI === 'function') {
+        const today = new Date();
+        try {
+          dispatch({ type: 'date_change', date: today });
+        } catch (error) {
+          console.error("Error usando fetchAPI después de load:", error);
+        }
+      } else {
+        console.warn("fetchAPI aún no está disponible incluso después del load.");
+      }
+    };
+
+    window.addEventListener('load', handleLoad);
+
+    // Limpieza por si el componente se desmonta
+    return () => window.removeEventListener('load', handleLoad);
+  }, []);
   const [resTime, setResTime] = useState(availableTimes[0]);
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState('Birthday');
   const occasions = ['Birthday', 'Anniversary', 'Other'];
 
-  return (
-    <form className={styles.form}>
+return (
+  <form
+    className={styles.form}
+    onSubmit={(e) => {
+      e.preventDefault();
+      submitForm({ resDate, resTime, guests, occasion });
+    }}
+  >
         <label htmlFor="res-date">Choose date</label>
-        <input type="date" value={resDate} onChange={e => setResDate(e.target.value)}/>
+        <input
+          type="date"
+          value={resDate}
+          onChange={(e) => {
+            const newDate = e.target.value;
+            setResDate(newDate);
+            dispatch({ type: 'date_change', date: new Date(newDate) });
+          }}
+        />
         <label htmlFor="res-time">Choose time</label>
         <select value={resTime} onChange={e => setResTime(e.target.value)}>
            {availableTimes.map(time => (
