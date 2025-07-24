@@ -30,6 +30,15 @@ function BookingForm({submitForm}) {
   const [occasion, setOccasion] = useState('Birthday');
   const occasions = ['Birthday', 'Anniversary', 'Other'];
 
+  const isFormValid = () => {
+  return (
+    resDate !== '' &&
+    resTime !== '' &&
+    guests > 1 &&
+    occasion !== ''
+  );
+};
+
 return (
   <form
     className={styles.form}
@@ -40,6 +49,7 @@ return (
   >
         <label htmlFor="res-date">Choose date</label>
         <input
+          id="res-date"
           type="date"
           value={resDate}
           onChange={(e) => {
@@ -47,9 +57,11 @@ return (
             setResDate(newDate);
             dispatch({ type: 'date_change', date: new Date(newDate) });
           }}
+          required
+          min={new Date().toISOString().split('T')[0]} // Prevent past dates
         />
         <label htmlFor="res-time">Choose time</label>
-        <select value={resTime} onChange={e => setResTime(e.target.value)}>
+        <select id="res-time" value={resTime} onChange={e => setResTime(e.target.value)} required>
            {availableTimes.map(time => (
             <option key={time} value={time}>
                 {time}
@@ -57,16 +69,16 @@ return (
            ))}
         </select>
         <label htmlFor="guests">Number of guests</label>
-        <input type="number" placeholder="1" min="1" max="10" value={guests} onChange={e => setGuests(Number(e.target.value))} />
+        <input id="guests" type="number" placeholder="1" min="1" max="10" value={guests} onChange={e => setGuests(Number(e.target.value))} required/>
         <label htmlFor="occasion">Occasion</label>
-        <select value={occasion} onChange={e => setOccasion(e.target.value)}>
+        <select id="occasion" value={occasion} onChange={e => setOccasion(e.target.value)} required>
           {occasions.map(occasion => (
             <option key={occasion} value={occasion}>
                 {occasion}
             </option>
           ))}
         </select>
-        <input type="submit" value="Make Your reservation" className={styles.submitButton}/>
+        <input aria-label='On Click' type="submit" value="Make Your reservation" disabled={!isFormValid()} className={styles.submitButton} />
     </form>
 
   );
